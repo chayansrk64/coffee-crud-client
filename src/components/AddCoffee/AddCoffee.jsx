@@ -15,8 +15,9 @@ const AddCoffee = () => {
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
+        const price = form.price.value;
 
-        const newCoffee = {name, quantity, supplier, taste, category, details, photo}
+        const newCoffee = {name, quantity, supplier, taste, category, details, photo, price}
         console.log(newCoffee);
 
         // send data to the server
@@ -115,8 +116,8 @@ const AddCoffee = () => {
                     </div>
                    </div>
                     {/* form  photo row */}
-                   <div className="mb-8">
-                   <div className="form-control">
+                   <div className="md:flex mb-8">
+                   <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
@@ -124,7 +125,19 @@ const AddCoffee = () => {
                             
                             <input type="text" name="photo" placeholder="Photo URL" className="input  w-full" />
                         </label>
+
                     </div>
+
+                    <div className="form-control md:w-1/2 ml-5">
+                        <label className="label">
+                            <span className="label-text">Coffee Price</span>
+                        </label>
+                        <label className="input-group">
+                            
+                            <input type="text" name="price" placeholder="Coffee Price" className="input   w-full" />
+                        </label>
+                    </div>
+                    
                      
                    </div>
                   
